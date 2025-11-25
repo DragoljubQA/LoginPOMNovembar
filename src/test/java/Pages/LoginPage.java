@@ -11,6 +11,7 @@ public class LoginPage {
     WebElement usernameField;
     WebElement passwordField;
     WebElement submitButton;
+    WebElement error;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -26,6 +27,10 @@ public class LoginPage {
 
     public WebElement getSubmitButton() {
         return driver.findElement(By.id("submit"));
+    }
+
+    public WebElement getError() {
+        return driver.findElement(By.id("error"));
     }
 
     //------------------------------
