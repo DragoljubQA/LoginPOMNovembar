@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     WebDriver driver;
+
     WebElement practiceButton;
 
     public HomePage(WebDriver driver) {
@@ -17,7 +18,7 @@ public class HomePage {
         return driver.findElement(By.id("menu-item-20"));
     }
 
-    //---------------------------------
+    //---------------------------
 
     public void clickOnPracticeButton() {
         getPracticeButton().click();

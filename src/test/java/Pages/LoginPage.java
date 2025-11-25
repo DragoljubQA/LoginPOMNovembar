@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 
     WebDriver driver;
+
     WebElement usernameField;
     WebElement passwordField;
     WebElement submitButton;
@@ -27,7 +28,7 @@ public class LoginPage {
         return driver.findElement(By.id("submit"));
     }
 
-    //--------------------------------
+    //------------------------------
 
     public void inputUsername(String username) {
         getUsernameField().clear();
@@ -42,6 +43,5 @@ public class LoginPage {
     public void clickOnSubmitButton() {
         getSubmitButton().click();
     }
-
 
 }

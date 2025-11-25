@@ -18,11 +18,10 @@ public class PracticePage {
         return driver.findElement(By.linkText("Test Login Page"));
     }
 
-    //----------------------------
+    //-------------------------------
 
     public void clickOnTestLoginPageButton() {
         getTestLoginPageButton().click();
     }
-
 
 }

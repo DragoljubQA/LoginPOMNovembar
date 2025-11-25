@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 public class ProfilePage {
 
     WebDriver driver;
-
     WebElement logOutButton;
 
     public ProfilePage(WebDriver driver) {
@@ -18,7 +17,7 @@ public class ProfilePage {
         return driver.findElement(By.linkText("Log out"));
     }
 
-    //------------------------------
+    //--------------------------
 
     public void clickOnLogOutButton() {
         getLogOutButton().click();

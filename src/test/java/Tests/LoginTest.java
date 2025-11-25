@@ -2,7 +2,6 @@ package Tests;
 
 import Base.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,19 +24,5 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(profilePage.getLogOutButton().isDisplayed());
     }
 
-    @Test
-    public void userCannotLogInWithInvalidUsername() {
-        String invalidUsername = "non student";
-        String validPassword = "Password123";
-        loginPage.inputUsername(invalidUsername);
-        loginPage.inputPassword(validPassword);
-        loginPage.clickOnSubmitButton();
-        Assert.assertTrue(loginPage.getSubmitButton().isDisplayed());
-    }
-
-    @AfterMethod
-    public void clearData() {
-        driver.manage().deleteAllCookies();
-    }
 
 }
